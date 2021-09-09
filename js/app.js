@@ -41,7 +41,7 @@ const jsonObjects = {
     ]
 }
 
-jsonObjects.team.forEach(object => console.log(object.fornavn));
+jsonObjects.team.forEach(object => console.log(object.fornavn, object.efternavn));
 
 
 
