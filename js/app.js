@@ -16,6 +16,7 @@ const jsonObjects = {
             "alder": 35,
             "adresse": "Paradisæblevej, Andeby"
         },
+
         {
             "fornavn": "Rap",
             "efternavn": "And",
@@ -23,13 +24,14 @@ const jsonObjects = {
             "adresse": "Paradisæblevej, Andeby"
 
         },
+
         {
             "fornavn": "Rup",
             "efternavn": "And",
             "alder": 37,
             "adresse": "Paradisæblevej, Andeby"
-
         },
+
         {
             "fornavn": "Andersine",
             "efternavn": "And",
@@ -38,6 +40,8 @@ const jsonObjects = {
         }
     ]
 }
+
+jsonObjects.team.forEach(object => console.log(object.fornavn));
 
 
 
