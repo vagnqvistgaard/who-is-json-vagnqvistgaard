@@ -1,5 +1,5 @@
 // json-opgaver for da world
-
+/*
 const jsonObjects = {
     team: [
 
@@ -40,6 +40,9 @@ const jsonObjects = {
         }
     ]
 }
+*/
+
+
 
 /* meningsfuld struktur:
 
@@ -54,6 +57,7 @@ jsonObjects.team.forEach(object => {
 
 
 /* LIGE FØR himlen faldt ned:
+opgave 4, med json i js-filen...
 
 for (i = 0; i < jsonObjects.team.length; i++) {
     let x = document.createElement("li");
@@ -62,6 +66,34 @@ for (i = 0; i < jsonObjects.team.length; i++) {
     x.textContent = `${y.fornavn} ${y.efternavn}, alder: ${y.alder} år, ${y.adresse}`;
 }
 */
+
+//opgave 6
+//kigger på fetch, og henter data fra ekstern fil, team.json...
+
+/*first method:
+
+    fetch('http://example.com/movies.json')
+        .then(response => response.json())
+        .then(data => console.log(data));
+
+*/
+// fetch promises base.. './file' betyder 
+//'roden af mappen med forespurgt fil.
+//'promise' betyder 'på et tidspunkt'.
+
+fetch('./js/team.json')
+    .then(response => response.json())
+    .then(data => {
+        for (i = 0; i < data.team.length; i++) {
+            let x = document.createElement("li");
+            document.querySelector("#duckList").appendChild(x);
+            console.log(data.team[0]);
+            let y = data.team[i];
+            x.textContent = `${y.fornavn} ${y.efternavn}, alder: ${y.alder} år, ${y.adresse}`;
+        }
+    });
+
+
 
 
 
