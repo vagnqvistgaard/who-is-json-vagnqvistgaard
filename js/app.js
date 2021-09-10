@@ -87,9 +87,9 @@ fetch('./js/team.json')
         for (i = 0; i < data.team.length; i++) {
             let x = document.createElement("li");
             document.querySelector("#duckList").appendChild(x);
-            console.log(data.team[0]);
             let y = data.team[i];
             x.textContent = `${y.fornavn} ${y.efternavn}, alder: ${y.alder} år, ${y.adresse}`;
+            console.log(data.team);
         }
     });
 
